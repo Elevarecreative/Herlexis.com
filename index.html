@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Herlexis Creative</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+    body { scroll-behavior: smooth; background: #fff; line-height: 1.6; }
+    header { position: fixed; width: 100%; background: rgba(0,0,0,0.7); color: #fff; display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem; z-index: 1000; }
+    header nav a { color: #fff; margin-left: 2rem; text-decoration: none; font-weight: 600; transition: 0.3s; }
+    header nav a:hover { color: #f0a500; }
+    section { min-height: 100vh; padding: 120px 2rem 50px 2rem; display: flex; align-items: center; justify-content: center; flex-direction: column; text-align: center; opacity: 0; transform: translateY(50px); transition: all 1s ease; }
+    section.visible { opacity: 1; transform: translateY(0); }
+    #home { background: url('your-hero-image.jpg') center/cover no-repeat; color: #fff; position: relative; overflow: hidden; }
+    #home h1 { font-size: 3rem; animation: floatText 3s ease-in-out infinite; }
+    #home p { font-size: 1.2rem; margin-bottom: 2rem; animation: floatText 3s ease-in-out infinite; animation-delay: 0.5s; max-width: 700px; }
+    @keyframes floatText { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-15px); } }
+    #about, #services, #portfolio, #blog, #videos, #clients, #behind, #contact { background: #f9f9f9; color: #333; }
+    h1, h2 { margin-bottom: 1rem; }
+    p { margin-bottom: 1.5rem; max-width: 800px; }
+    .btn { padding: 0.75rem 1.5rem; background: #f0a500; color: #fff; text-decoration: none; border-radius: 5px; font-weight: 600; transition: 0.3s; }
+    .btn:hover { background: #333; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-top: 2rem; }
+    .grid-item { background: #fff; padding: 1rem; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); transition: transform 0.3s, box-shadow 0.3s; cursor: pointer; }
+    .grid-item:hover { transform: translateY(-10px); box-shadow: 0 8px 20px rgba(0,0,0,0.2); }
+    #chatbox { position: fixed; bottom: 20px; right: 20px; width: 300px; max-width: 90%; }
+    #chatbox button { background: #f0a500; border: none; padding: 0.5rem 1rem; border-radius: 50px; color: #fff; cursor: pointer; font-weight: bold; }
+    #chatbox-content { display: none; background: #fff; border: 1px solid #ccc; border-radius: 8px; margin-top: 0.5rem; max-height: 400px; overflow-y: auto; padding: 1rem; }
+    footer { background: #222; color: #fff; text-align: center; padding: 2rem; }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo"><h2>Herlexis</h2></div>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#blog">Blog</a>
+    <a href="#videos">Videos</a>
+    <a href="#clients">Clients</a>
+    <a href="#behind">Behind</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section id="home">
+  <h1>Welcome to Herlexis Creative</h1>
+  <p>We bring your vision to life with stunning video production, animations, and creative digital storytelling. Every project is a unique journey we take with our clients to create impact and engagement.</p>
+  <a href="#contact" class="btn">Get in Touch</a>
+</section>
+
+<section id="about">
+  <h2>About Us</h2>
+  <p>Founded by a team of passionate creatives, Herlexis Creative has spent years crafting content that inspires, educates, and entertains. Our expertise spans video production, animation, branding, and social media content.</p>
+  <p>Our mission is to deliver high-quality visual storytelling while maintaining strong client collaboration. We believe creativity thrives in transparency, innovation, and dedication.</p>
+  <p>From concept development to post-production, we provide end-to-end services to make sure every project exceeds expectations.</p>
+</section>
+
+<section id="services">
+  <h2>Our Services</h2>
+  <div class="grid">
+    <div class="grid-item">
+      <h3>Video Production</h3>
+      <p>We handle filming, editing, and post-production for commercials, promotional videos, and corporate content. Your story is our lens.</p>
+    </div>
+    <div class="grid-item">
+      <h3>Animation & Motion Graphics</h3>
+      <p>Bring concepts to life with 2D/3D animation, motion graphics, and explainer videos that captivate audiences.</p>
+    </div>
+    <div class="grid-item">
+      <h3>Branding & Design</h3>
+      <p>From logos to social media branding, we craft visuals that define your identity and make a lasting impression.</p>
+    </div>
+    <div class="grid-item">
+      <h3>Social Media Content</h3>
+      <p>Create engaging posts, reels, and stories optimized for each platform to grow your audience and boost engagement.</p>
+    </div>
+  </div>
+</section>
+
+<section id="portfolio">
+  <h2>Portfolio</h2>
+  <div class="grid">
+    <div class="grid-item"><h3>Project Alpha</h3><p>A corporate video highlighting the company’s journey and achievements.</p></div>
+    <div class="grid-item"><h3>Animated Explainer</h3><p>3D animation to explain complex services in an engaging, simple way.</p></div>
+    <div class="grid-item"><h3>Brand Refresh</h3><p>Redesign of brand identity and visuals for a modern, cohesive look.</p></div>
+    <div class="grid-item"><h3>Social Media Campaign</h3><p>Series of videos and graphics that increased engagement by 40% for a client.</p></div>
+  </div>
+</section>
+
+<section id="blog">
+  <h2>Blog & Newsletters</h2>
+  <p>Stay updated on industry trends, creative tips, and behind-the-scenes insights from our projects. Our blog provides valuable resources for marketers, business owners, and creators alike.</p>
+  <ul style="text-align:left; max-width:700px; margin:auto; margin-bottom:1.5rem;">
+    <li>5 Tips for Creating Engaging Video Content</li>
+    <li>How Animation Boosts Audience Retention</li>
+    <li>Branding Mistakes to Avoid in 2025</li>
+  </ul>
+  <p>Subscribe to our newsletter for exclusive insights delivered straight to your inbox.</p>
+</section>
+
+<section id="videos">
+  <h2>Videos</h2>
+  <div class="grid">
+    <div class="grid-item"><h3>Promo Video 1</h3><p>Showcase of product launch with dynamic visuals.</p></div>
+    <div class="grid-item"><h3>Promo Video 2</h3><p>Customer testimonial and brand storytelling.</p></div>
+    <div class="grid-item"><h3>Explainer Video</h3><p>Animated video explaining services and benefits.</p></div>
+  </div>
+</section>
+
+<section id="clients">
+  <h2>Partners & Clients</h2>
+  <p>We have worked with a diverse range of clients from startups to established brands. Our collaborations are built on trust, creativity, and measurable results.</p>
+  <p>Clients include: TechCorp, Bright Media, Creative Minds, and Global Ventures.</p>
+</section>
+
+<section id="behind">
+  <h2>Behind the Scenes</h2>
+  <p>Discover the creative process at Herlexis. From brainstorming sessions to editing suites, our team works collaboratively to deliver every project with passion and precision.</p>
+  <p>We value transparency and love to show our clients the magic behind each video, from storyboarding to post-production.</p>
+</section>
+
+<section id="contact">
+  <h2>Contact Us</h2>
+  <p>Email: <a href="mailto:contact.elevarecreative@gmail.com">contact.elevarecreative@gmail.com</a></p>
+  <p>Phone: <a href="tel:+14378705403">+1 437-870-5403</a></p>
+  <p>Reach out to discuss your project, request a quote, or just say hello. We respond promptly and are excited to collaborate!</p>
+  <form action="mailto:contact.elevarecreative@gmail.com" method="post" enctype="text/plain">
+    <input type="text" name="name" placeholder="Your Name" required style="margin-bottom:1rem;width:100%;padding:0.5rem;">
+    <input type="email" name="email" placeholder="Your Email" required style="margin-bottom:1rem;width:100%;padding:0.5rem;">
+    <textarea name="message" placeholder="Your Message" required style="margin-bottom:1rem;width:100%;padding:0.5rem;"></textarea>
+    <button type="submit" class="btn">Send Message</button>
+  </form>
+</section>
+
+<div id="chatbox">
+  <button onclick="toggleChat()">Chat</button>
+  <div id="chatbox-content">
+    <p><strong>Herlexis Bot:</strong> Hi! How can we help you today?</p>
+    <p><strong>You:</strong> I want a video project quote.</p>
+    <p><strong>Herlexis Bot:</strong> Please email us at contact.elevarecreative@gmail.com with your project details!</p>
+  </div>
+</div>
+
+<footer>
+  <p>&copy; 2025 Herlexis Creative. All rights reserved.</p>
+</footer>
+
+<script>
+  function toggleChat() {
+    const chat = document.getElementById('chatbox-content');
+    chat.style.display = chat.style.display === 'block' ? 'none' : 'block';
+  }
+
+  const sections = document.querySelectorAll('section');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.2 });
+
+  sections.forEach(section => observer.observe(section));
+</script>
+
+</body>
+</html>
